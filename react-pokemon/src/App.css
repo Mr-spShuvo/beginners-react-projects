@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+html,
+body {
+  background-color: #f9f3f1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  width: 80%;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  border-bottom: 2px solid #eaeaea;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 20px;
+  color: teal;
+}
+
+.logo__sub {
+  color: tomato;
+}
+
+.pokemon-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  margin-bottom: -30px;
+}
+
+.pokemon {
+  flex-basis: 18%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 30px;
+  box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.05);
+}
+
+.pokemon__img {
+  margin: 10px;
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  background-color: #f9f3f1;
+  border-radius: 50%;
+}
+
+.pokemon__img img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.pokemon__name {
+  text-transform: capitalize;
+  color: #444;
+}
+
+.pagination {
+  text-align: center;
+  border-top: 2px solid #eaeaea;
+  padding-top: 30px;
+}
+
+.pagination button {
+  color: #fff;
+  background-color: teal;
+  padding: 8px 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.pagination button:first-child {
+  margin-right: 30px;
+  background-color: tomato;
+}
+
+.pagination button:hover {
+  opacity: 0.9;
+}
+
+.pagination button.disabled,
+.pagination button.disabled:hover {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.loader {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 510px;
+  background-color: #fff;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loader img {
+  width: 50px;
 }

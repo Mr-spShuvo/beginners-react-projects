@@ -1,8 +1,10 @@
 App:
-  ☐ Currency Converter
+  ✔ Currency Converter
     ✔ API Call @done(20-08-26 19:56)
     ✔ Complete Calculation @done(20-08-29 02:07)
     ✔ Adding Styles @done(20-08-29 03:47)
-  ☐ Pokemon React
+  ✔ Pokemon React
+    ✔ API Call @done(20-08-31 10:13)
+    ✔ Complete Pagination @done(20-08-31 15:29)
+    ✔ Adding Styles @done(20-08-31 17:44)
   ☐ Flash Cards React
-  ☐ React Hooks 
