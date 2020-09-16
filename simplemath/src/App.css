@@ -1,0 +1,132 @@
+:root {
+  --color-bg: #e4dccf;
+  --color-bg-dark: #b5afa4;
+  --color-dark: #373c40;
+  --color-screen: #a2b39e;
+  --color-true: #54b93a;
+  --color-true-dark: #368323;
+  --color-false: #c62e2e;
+  --color-false-dark: #932424;
+  --color-restart: #ff8019;
+  --color-restart-dark: #d14700;
+  --color-score: #3d3a3a;
+  --color-score-dark: #121314;
+}
+
+@font-face {
+  font-family: 'Digits';
+  src: url('./digits.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Digits';
+}
+
+.app {
+  background-color: #f6f6f6;
+  position: relative;
+  min-height: 100vh;
+}
+
+.calculator {
+  background-color: var(--color-bg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: -3px 3px 15px #00000010;
+}
+
+.calc-header {
+  padding: 40px 20px;
+  background-color: var(--color-dark);
+  border-radius: 15px;
+}
+
+.calc-screen {
+  width: 280px;
+  border-radius: 15px;
+  background-color: var(--color-screen);
+  color: var(--color-dark);
+  text-align: right;
+  padding: 10px 20px;
+}
+
+.calc-digits {
+  font-size: 45px;
+}
+.calc-equal {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  line-height: 0.8;
+}
+.calc-result {
+  font-size: 72px;
+}
+
+.calc-body {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: -20px;
+}
+
+.calc-action {
+  display: block;
+  padding: 15px 0;
+  flex-basis: 47%;
+  margin-bottom: 35px;
+  font-size: 42px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: -3px 3px 15px #00000010;
+  position: relative;
+}
+
+.calc-action::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.calc-action--true {
+  background-color: var(--color-true);
+}
+.calc-action--true::after {
+  background-color: var(--color-true-dark);
+}
+
+.calc-action--false {
+  background-color: var(--color-false);
+}
+.calc-action--false::after {
+  background-color: var(--color-false-dark);
+}
+
+.calc-action--restart {
+  background-color: var(--color-restart);
+}
+.calc-action--restart::after {
+  background-color: var(--color-restart-dark);
+}
+
+.calc-action--score {
+  background-color: var(--color-score);
+}
+.calc-action--score::after {
+  background-color: var(--color-score-dark);
+}
