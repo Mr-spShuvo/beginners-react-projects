@@ -14,15 +14,26 @@
 }
 
 @font-face {
-  font-family: 'Digits';
-  src: url('./digits.otf');
+  font-family: "Digits";
+  src: url("./digits.otf");
+}
+
+@keyframes anim-rotate {
+  from {
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+  to {
+    transform: rotate(360deg);
+    transform-origin: 50%;
+  }
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Digits';
+  font-family: "Digits";
 }
 
 .app {
@@ -37,8 +48,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 25px;
-  border-radius: 10px;
+  padding: 30px;
+  border-radius: 30px;
   box-shadow: -3px 3px 15px #00000010;
 }
 
@@ -46,6 +57,25 @@
   padding: 40px 20px;
   background-color: var(--color-dark);
   border-radius: 15px;
+  position: relative;
+}
+
+.calc-timer {
+  position: absolute;
+  color: var(--color-bg);
+  top: 8px;
+  left: 50%;
+  height: 10px;
+  transform: translateX(-50%);
+  font-size: 20px;
+}
+
+.calc-clock {
+  display: inline-block;
+}
+
+.calc-rotate {
+  animation: anim-rotate 1s linear infinite;
 }
 
 .calc-screen {
@@ -60,6 +90,7 @@
 .calc-digits {
   font-size: 45px;
 }
+
 .calc-equal {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 48px;
@@ -90,43 +121,67 @@
   border-radius: 10px;
   box-shadow: -3px 3px 15px #00000010;
   position: relative;
+  border: 3px solid;
 }
 
 .calc-action::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   position: absolute;
   top: 15px;
-  left: 0;
+  left: -3px;
   border-radius: 12px;
   z-index: -1;
+  border: 3px solid;
+}
+
+.calc-action:active {
+  bottom: -10px;
+}
+
+.calc-action:active.calc-action::after {
+  content: "";
+  top: 10px;
 }
 
 .calc-action--true {
   background-color: var(--color-true);
+  border-color: var(--color-true-dark);
 }
 .calc-action--true::after {
   background-color: var(--color-true-dark);
+  border-color: var(--color-true-dark);
 }
 
 .calc-action--false {
   background-color: var(--color-false);
+  border-color: var(--color-false-dark);
 }
 .calc-action--false::after {
   background-color: var(--color-false-dark);
+  border-color: var(--color-false-dark);
 }
 
 .calc-action--restart {
+  font-weight: 900;
   background-color: var(--color-restart);
+  border-color: var(--color-restart-dark);
 }
 .calc-action--restart::after {
   background-color: var(--color-restart-dark);
+  border-color: var(--color-restart-dark);
 }
 
 .calc-action--score {
   background-color: var(--color-score);
+  border-color: var(--color-score-dark);
 }
 .calc-action--score::after {
   background-color: var(--color-score-dark);
+  border-color: var(--color-score-dark);
+}
+
+.calc-action--disabled {
+  pointer-events: none;
 }

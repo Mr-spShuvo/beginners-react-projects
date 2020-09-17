@@ -1,12 +1,15 @@
-import React from 'react';
+import React from "react";
 
-function CalcScreen() {
+function CalcScreen({ dataDigits, dataResult }) {
   return (
     <div className="calc-header">
+      <p className="calc-timer">
+        <span className="calc-clock">&#x262F;</span> 10 s
+      </p>
       <div className="calc-screen">
-        <div className="calc-digits">3 + 4 + 5</div>
+        <div className="calc-digits">{dataDigits}</div>
         <div className="calc-equal"> &#61; </div>
-        <div className="calc-result">12</div>
+        <div className="calc-result">{dataResult}</div>
       </div>
     </div>
   );
