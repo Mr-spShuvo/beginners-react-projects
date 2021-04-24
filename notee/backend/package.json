@@ -1,0 +1,18 @@
+{
+  "name": "notee-backend",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "dependencies": {
+    "mongoose": "^5.12.5",
+    "socket.io": "^4.0.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7"
+  }
+}
